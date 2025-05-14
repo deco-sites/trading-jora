@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 187 75% 40%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 187 75% 95%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 187 75% 93%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 187 75% 94%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 187 75% 40%;
+
+    --radius: 0.75rem;
+
+    /* Trading specific colors */
+    --profit: 142 76% 36%;
+    --profit-background: 142 76% 95%;
+    --loss: 0 84% 60%;
+    --loss-background: 0 84% 95%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 70% 7%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 70% 7%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 187 75% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 187 75% 15%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 187 75% 50%;
+
+    /* Trading specific dark colors */
+    --profit: 142 76% 45%;
+    --profit-background: 142 70% 15%;
+    --loss: 0 84% 65%;
+    --loss-background: 0 84% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.calendar-day {
+  @apply min-h-28 border border-border relative;
+}
+
+.trade-day-profit {
+  @apply bg-[hsl(var(--profit-background))];
+}
+
+.trade-day-loss {
+  @apply bg-[hsl(var(--loss-background))];
+}
+
+.profit-text {
+  @apply text-[hsl(var(--profit))];
+}
+
+.loss-text {
+  @apply text-[hsl(var(--loss))];
+}
